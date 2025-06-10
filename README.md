@@ -30,3 +30,55 @@ Questo sito web rappresenta una vetrina interattiva del marchio "Air Up", che pr
 
 ## 📁 Struttura del progetto
 
+hw1/
+├── index.php # Pagina principale (homepage)
+├── login.html # Form login utente
+├── register.html # Form registrazione utente
+├── mhw3.css # Foglio di stile principale
+├── mhw3.js # JavaScript principale (interazioni asincrone)
+├── register.php # API registrazione utente
+├── login.php # API login
+├── logout.php # Logout sessione
+├── check_session.php # Verifica se l’utente è loggato (AJAX)
+├── check_username.php # Verifica disponibilità username (AJAX)
+├── weather.php # API server-side per dati meteo
+├── dbconfig.php # Connessione al database MySQL
+├── schema.sql # File di esportazione struttura database
+├── immagini/
+│ ├── hero2.jpg
+│ ├── bottle.jpg
+│ ├── menu.PNG
+│ ├── logo2.PNG
+│ ├── carrello.PNG
+│ ├── limone.jpg / limone-thumb.jpg
+│ ├── fragola.jpg / fragola-thumb.jpg
+│ ├── menta.jpg / menta-thumb.jpg
+
+yaml
+Copia
+Modifica
+
+---
+
+## 🧪 Validazioni
+
+**Lato client:**
+- Verifica formato della password (min. 8 caratteri, 1 maiuscola, 1 numero, 1 simbolo)
+- Controllo AJAX su disponibilità dello username
+
+**Lato server:**
+- Protezione tramite query preparate (MySQLi `prepare`)
+- Hash sicuro della password con `password_hash`
+- Verifica credenziali tramite `password_verify`
+- Sessioni gestite tramite `$_SESSION`
+
+---
+
+## 📦 Requisiti e dipendenze
+
+- PHP 8.0+
+- MySQL 5.7+
+- Web server locale (es. Apache tramite XAMPP/Laragon)
+- Connessione Internet per accedere alle API esterne
+
+---
